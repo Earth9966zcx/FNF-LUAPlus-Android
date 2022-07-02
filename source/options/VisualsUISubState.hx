@@ -84,6 +84,13 @@ class VisualsUISubState extends BaseOptionsMenu
 			'Middle',
 			['Left', 'Middle', 'Right']);
 		addOption(option);
+		
+		var option:Option = new Option('Golden Apple Icon Bop',
+			"If checked, makes the icons bop like in golden apple",
+			'GAiconbop',
+			'bool',
+			false);
+		addOption(option);
 
 		var option:Option = new Option('Health Bar Transparency',
 			'How much transparent should the health bar and icons be.',
