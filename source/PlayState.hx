@@ -1175,7 +1175,7 @@ class PlayState extends MusicBeatState
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 		
-	public var watermarkTxt:FlxText = new FlxText(0, 699, camHUD.width, songName + ' - ' + CoolUtil.difficulties[PlayState.storyDifficulty] + ' | Psych Engine' + MainMenuState.psychEngineVersion, 20);
+	public var watermarkTxt = new FlxText(0, 699, camHUD.width, songName + ' - ' + CoolUtil.difficulties[PlayState.storyDifficulty] + ' | Psych Engine' + MainMenuState.psychEngineVersion, 20);
 		watermarkTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		watermarkTxt.scrollFactor.set();
 		watermarkTxt.borderSize = 1.25;
