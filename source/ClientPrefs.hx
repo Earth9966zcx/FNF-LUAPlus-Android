@@ -20,6 +20,11 @@ class ClientPrefs {
 	public static var violence:Bool = true;
 	public static var camZooms:Bool = true;
 	public static var hideHud:Bool = false;
+	// funny lua+
+	public static var GAiconbop:Bool = false;
+  public static var watermark:Bool = false;
+  public static var iconsSide:String = 'Middle'
+
 	public static var noteOffset:Int = 0;
 	public static var arrowHSV:Array<Array<Int>> = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
 	public static var imagesPersist:Bool = false;
@@ -109,6 +114,11 @@ class ClientPrefs {
 		FlxG.save.data.noteOffset = noteOffset;
 		FlxG.save.data.hideHud = hideHud;
 		FlxG.save.data.arrowHSV = arrowHSV;
+		// funny lua+
+		FlxG.save.data.watermark = watermark;
+    FlxG.save.data.GAiconbop = GAiconbop;
+    FlxG.save.data.iconsSide = iconSides;
+    
 		FlxG.save.data.imagesPersist = imagesPersist;
 		FlxG.save.data.ghostTapping = ghostTapping;
 		FlxG.save.data.timeBarType = timeBarType;
@@ -167,6 +177,15 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.lowQuality != null) {
 			lowQuality = FlxG.save.data.lowQuality;
+		}
+		if(FlxG.save.data.GAiconbop != null) {
+		  GAiconbop = FlxG.save.data.GAiconbop;
+		}
+		if(FlxG.save.data.watermark != null) {
+		  watermark = FlxG.save.data.watermark;
+		}
+		if(FlxG.save.data.iconsSide != null) {
+		  iconsSide = FlxG.save.data.iconsSide;
 		}
 		if(FlxG.save.data.framerate != null) {
 			framerate = FlxG.save.data.framerate;
