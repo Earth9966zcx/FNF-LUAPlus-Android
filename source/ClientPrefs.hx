@@ -117,7 +117,7 @@ class ClientPrefs {
 		// funny lua+
 		FlxG.save.data.watermark = watermark;
     FlxG.save.data.GAiconbop = GAiconbop;
-    FlxG.save.data.iconsSide = iconSides;
+    FlxG.save.data.iconsSide = iconsSide;
     
 		FlxG.save.data.imagesPersist = imagesPersist;
 		FlxG.save.data.ghostTapping = ghostTapping;
