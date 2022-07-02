@@ -91,6 +91,13 @@ class VisualsUISubState extends BaseOptionsMenu
 			'bool',
 			false);
 		addOption(option);
+		
+		var option:Option = new Option('Song Watermark',
+			"If checked, adds a watermark that shows the song name, the difficulty, and the version you use",
+			'watermark',
+			'bool',
+			false);
+		addOption(option);
 
 		var option:Option = new Option('Health Bar Transparency',
 			'How much transparent should the health bar and icons be.',
