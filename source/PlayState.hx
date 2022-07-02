@@ -2919,7 +2919,6 @@ if (ClientPrefs.GAiconbop == false) {
 }
 
 if (ClientPrefs.GAiconbop == true) {
-		//health icon bounce but epic
 		if (curBeat % gfSpeed == 0) {
 			curBeat % (gfSpeed * 2) == 0 ? {
 				iconP1.scale.set(1.1, 0.8);
@@ -2937,6 +2936,8 @@ if (ClientPrefs.GAiconbop == true) {
 
 			FlxTween.tween(iconP1, {'scale.x': 1, 'scale.y': 1}, Conductor.crochet / 1250 * gfSpeed, {ease: FlxEase.quadOut});
 			FlxTween.tween(iconP2, {'scale.x': 1, 'scale.y': 1}, Conductor.crochet / 1250 * gfSpeed, {ease: FlxEase.quadOut});
+			FlxTween.angle(iconP2, 0, 0, Conductor.crochet / 1250 * gfSpeed, {ease: FlxEase.quadOut});
+			FlxTween.angle(iconP1, 0, 0, Conductor.crochet / 1250 * gfSpeed, {ease: FlxEase.quadOut});
 
 			iconP1.updateHitbox();
 			iconP2.updateHitbox();
