@@ -23,7 +23,7 @@ class ClientPrefs {
 	// funny lua+
 	public static var GAiconbop:Bool = false;
   public static var watermark:Bool = false;
-  public static var iconsSide:String = 'Middle'
+  public static var iconsSide:String = 'Middle';
 
 	public static var noteOffset:Int = 0;
 	public static var arrowHSV:Array<Array<Int>> = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
