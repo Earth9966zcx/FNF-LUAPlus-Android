@@ -1177,7 +1177,7 @@ class PlayState extends MusicBeatState
 		
 	public var watermarkTxt:FlxText;
 	  watermarkTxt = new FlxText(0, 699, camHUD.width, songName + ' - ' + CoolUtil.difficulties[PlayState.storyDifficulty] + ' | Psych Engine' + MainMenuState.psychEngineVersion, 20);
-		watermarkTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		watermarkTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		watermarkTxt.scrollFactor.set();
 		watermarkTxt.borderSize = 1.25;
 		watermarkTxt.visible = !ClientPrefs.hideHud;
