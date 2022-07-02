@@ -113,6 +113,7 @@ class PlayState extends MusicBeatState
 	public var DAD_Y:Float = 100;
 	public var GF_X:Float = 400;
 	public var GF_Y:Float = 130;
+	
 
 	public var songSpeedTween:FlxTween;
 	public var songSpeed(default, set):Float = 1;
@@ -1173,6 +1174,13 @@ class PlayState extends MusicBeatState
 		scoreTxt.borderSize = 1.25;
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
+		
+	public var watermarkTxt:FlxText = new FlxText(0, 699, camHUD.width, songName + ' - ' + CoolUtil.difficulties[PlayState.storyDifficulty] + ' | Psych Engine' + MainMenuState.psychEngineVersion, 20);
+		watermarkTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		watermarkTxt.scrollFactor.set();
+		watermarkTxt.borderSize = 1.25;
+		watermarkTxt.visible = !ClientPrefs.hideHud;
+		add(watermarkTxt);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -1191,6 +1199,9 @@ class PlayState extends MusicBeatState
 		healthBarBG.cameras = [camHUD];
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
+    if(ClientPrefs.watermark == true) {
+    watermarkTxt.cameras = [camHUD];
+		}
 		scoreTxt.cameras = [camHUD];
 		botplayTxt.cameras = [camHUD];
 		timeBar.cameras = [camHUD];
@@ -2919,8 +2930,8 @@ if (ClientPrefs.GAiconbop == false) {
 }
 
 if (ClientPrefs.GAiconbop == true) {
-		if (curBeat % gfSpeed == 0) {
-			curBeat % (gfSpeed * 2) == 0 ? {
+		//health icon bounce but epic
+		if (curBeat % 2 == 0) {
 				iconP1.scale.set(1.1, 0.8);
 				iconP2.scale.set(1.1, 1.3);
 
@@ -2936,9 +2947,7 @@ if (ClientPrefs.GAiconbop == true) {
 
 			FlxTween.tween(iconP1, {'scale.x': 1, 'scale.y': 1}, Conductor.crochet / 1250 * gfSpeed, {ease: FlxEase.quadOut});
 			FlxTween.tween(iconP2, {'scale.x': 1, 'scale.y': 1}, Conductor.crochet / 1250 * gfSpeed, {ease: FlxEase.quadOut});
-			FlxTween.angle(iconP2, 0, 0, Conductor.crochet / 1250 * gfSpeed, {ease: FlxEase.quadOut});
-			FlxTween.angle(iconP1, 0, 0, Conductor.crochet / 1250 * gfSpeed, {ease: FlxEase.quadOut});
-
+			
 			iconP1.updateHitbox();
 			iconP2.updateHitbox();
 		}
