@@ -76,6 +76,14 @@ class VisualsUISubState extends BaseOptionsMenu
 			'bool',
 			true);
 		addOption(option);
+		
+		var option:Option = new Option('Main Menu Icons Side',
+			"what do you want the Icons in Main Menu to go?",
+			'iconsSide',
+			'string',
+			'Middle',
+			['Left', 'Middle', 'Right']);
+		addOption(option);
 
 		var option:Option = new Option('Health Bar Transparency',
 			'How much transparent should the health bar and icons be.',
