@@ -253,6 +253,7 @@ class PlayState extends MusicBeatState
 	public var songMisses:Int = 0;
 	public var scoreTxt:FlxText;
 	var timeTxt:FlxText;
+	public var watermarkTxt:FlxText;
 	var scoreTxtTween:FlxTween;
 
 	public static var campaignScore:Int = 0;
@@ -1175,7 +1176,6 @@ class PlayState extends MusicBeatState
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 		
-	public var watermarkTxt:FlxText;
 	  watermarkTxt = new FlxText(0, 699, camHUD.width, songName + ' - ' + CoolUtil.difficulties[PlayState.storyDifficulty] + ' | Psych Engine' + MainMenuState.psychEngineVersion, 20);
 		watermarkTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		watermarkTxt.scrollFactor.set();
