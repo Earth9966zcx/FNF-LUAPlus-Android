@@ -115,7 +115,6 @@ class ClientPrefs {
 		FlxG.save.data.arrowHSV = arrowHSV;
 		// funny lua+
 		FlxG.save.data.watermark = watermark;
-    FlxG.save.data.GAiconbop = GAiconbop;
     FlxG.save.data.iconsSide = iconsSide;
     
 		FlxG.save.data.imagesPersist = imagesPersist;
@@ -176,9 +175,6 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.lowQuality != null) {
 			lowQuality = FlxG.save.data.lowQuality;
-		}
-		if(FlxG.save.data.GAiconbop != null) {
-		  GAiconbop = FlxG.save.data.GAiconbop;
 		}
 		if(FlxG.save.data.watermark != null) {
 		  watermark = FlxG.save.data.watermark;
