@@ -2928,17 +2928,18 @@ class PlayState extends MusicBeatState
 		iconP2.scale.set(mult, mult);
 		iconP2.updateHitbox();
 		
-	if(curBeat % 2 == 0) {
+	if(curBeat % 2 == 1) {
 		  iconP1.scale.set(1.1, 0.8);
 			iconP2.scale.set(1.1, 1.3);
 			iconP2.angle = 25;
 			iconP1.angle = -25;
-	} : }
+	}
+	if(curBeat % 2 == 0) {
 		  iconP2.scale.set(1.1, 0.8);
 			iconP1.scale.set(1.1, 1.3);
 			iconP1.angle = 25;
 			iconP2.angle = -25;
-	{
+	}
 	  FlxTween.tween(iconP1, {'scale.x': 1}, {'scale.y': 1}, 0.3)
 		FlxTween.tween(iconP2, {'scale.x': 1}, {'scale.y': 1}, 0.3)
 		iconP1.updateHitbox();
