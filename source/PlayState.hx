@@ -2931,8 +2931,7 @@ if (ClientPrefs.GAiconbop == false) {
 }
 
 if (ClientPrefs.GAiconbop == true) {
-		//health icon bounce but epic
-		if (curBeat % 2 == 0) {
+  		if (curBeat % 2 == 0) {
 				iconP1.scale.set(1.1, 0.8);
 				iconP2.scale.set(1.1, 1.3);
 
@@ -2952,7 +2951,6 @@ if (ClientPrefs.GAiconbop == true) {
 			iconP1.updateHitbox();
 			iconP2.updateHitbox();
 		}
-}
 		var iconOffset:Int = 26;
 
 		iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) + (150 * iconP1.scale.x - 150) / 2 - iconOffset;
