@@ -2940,8 +2940,8 @@ class PlayState extends MusicBeatState
 			iconP1.angle = 25;
 			iconP2.angle = -25;
 	}
-	  FlxTween.tween(iconP1, {'scale.x': 1}, {'scale.y': 1}, 0.3)
-		FlxTween.tween(iconP2, {'scale.x': 1}, {'scale.y': 1}, 0.3)
+	  FlxTween.tween(iconP1, {'scale.x': 1}, {'scale.y': 1}, 0.3);
+		FlxTween.tween(iconP2, {'scale.x': 1}, {'scale.y': 1}, 0.3);
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
 
