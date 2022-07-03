@@ -2933,7 +2933,7 @@ class PlayState extends MusicBeatState
 			iconP2.scale.set(1.1, 1.3);
 			iconP2.angle = 25;
 			iconP1.angle = -25;
-	} : {
+	} : }
 		  iconP2.scale.set(1.1, 0.8);
 			iconP1.scale.set(1.1, 1.3);
 			iconP1.angle = 25;
