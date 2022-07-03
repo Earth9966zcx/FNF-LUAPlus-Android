@@ -85,13 +85,6 @@ class VisualsUISubState extends BaseOptionsMenu
 			['Left', 'Middle', 'Right']);
 		addOption(option);
 		
-		var option:Option = new Option('Golden Apple Icon Bop',
-			"If checked, makes the icons bop like in golden apple",
-			'GAiconbop',
-			'bool',
-			false);
-		addOption(option);
-		
 		var option:Option = new Option('Song Watermark',
 			"If checked, adds a watermark that shows the song name, the difficulty, and the version you use",
 			'watermark',
