@@ -21,7 +21,6 @@ class ClientPrefs {
 	public static var camZooms:Bool = true;
 	public static var hideHud:Bool = false;
 	// funny lua+
-	public static var GAiconbop:Bool = false;
   public static var watermark:Bool = false;
   public static var iconsSide:String = 'Middle';
 
