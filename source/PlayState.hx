@@ -2920,28 +2920,29 @@ class PlayState extends MusicBeatState
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
 
-		//health icon bounce but epic
-		if (curBeat % gfSpeed == 0) {
-			curBeat % (gfSpeed * 2) == 0 ? {
-				iconP1.scale.set(1.1, 0.8);
-				iconP2.scale.set(1.1, 1.3);
+		var mult:Float = FlxMath.lerp(1, iconP1.scale.x, CoolUtil.boundTo(1 - (elapsed * 9), 0, 1));
+		iconP1.scale.set(mult, mult);
+		iconP1.updateHitbox();
 
-				FlxTween.angle(iconP1, -15, 0, 0.3, {ease: FlxEase.quadOut});
-				FlxTween.angle(iconP2, 15, 0, 0.3, {ease: FlxEase.quadOut});
-			} : {
-				iconP1.scale.set(1.1, 1.3);
-				iconP2.scale.set(1.1, 0.8);
-
-				FlxTween.angle(iconP2, -15, 0, 0.3, {ease: FlxEase.quadOut});
-				FlxTween.angle(iconP1, 15, 0, 0.3, {ease: FlxEase.quadOut});
-			}
-
-			FlxTween.tween(iconP1, {'scale.x': 1, 'scale.y': 1}, 0.3, {ease: FlxEase.quadOut});
-			FlxTween.tween(iconP2, {'scale.x': 1, 'scale.y': 1}, 0.3, {ease: FlxEase.quadOut});
-
-			iconP1.updateHitbox();
-			iconP2.updateHitbox();
-		}
+		var mult:Float = FlxMath.lerp(1, iconP2.scale.x, CoolUtil.boundTo(1 - (elapsed * 9), 0, 1));
+		iconP2.scale.set(mult, mult);
+		iconP2.updateHitbox();
+		
+	if(curBeat % 2 == 0) {
+		  iconP1.scale.set(1.1, 0.8);
+			iconP2.scale.set(1.1, 1.3);
+			iconP2.angle = 25;
+			iconP1.angle = -25;
+	} : {
+		  iconP2.scale.set(1.1, 0.8);
+			iconP1.scale.set(1.1, 1.3);
+			iconP1.angle = 25;
+			iconP2.angle = -25;
+	{
+	  FlxTween.tween(iconP1, {'scale.x': 1}, {'scale.y': 1}, 0.3)
+		FlxTween.tween(iconP2, {'scale.x': 1}, {'scale.y': 1}, 0.3)
+		iconP1.updateHitbox();
+		iconP2.updateHitbox();
 
 		var iconOffset:Int = 26;
 
